@@ -40,6 +40,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\componentes\seguridad\SeguridadMVC\SeguridadMVC\CapaModelo\bin\Debug\Capa_Modelo_Seguridad.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_Vista_Reporteador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\componentes\reporteador\reporteador\Capa_Vista_Reporteador\bin\Debug\Capa_Vista_Reporteador.dll</HintPath>
+    </Reference>
     <Reference Include="Capa_Vista_Secciones">
       <HintPath>..\..\mantenimiento_examen\Capa_Vista_Secciones\Capa_Vista_Secciones\bin\Debug\Capa_Vista_Secciones.dll</HintPath>
     </Reference>

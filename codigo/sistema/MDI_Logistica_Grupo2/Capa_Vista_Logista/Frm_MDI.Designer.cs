@@ -51,6 +51,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.seccionesMantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Pnl_Superior.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -90,7 +92,8 @@
             this.herramientasToolStripMenuItem,
             this.asignacionesToolStripMenuItem,
             this.seguridadToolStripMenuItem,
-            this.seccionesToolStripMenuItem1});
+            this.seccionesToolStripMenuItem1,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 59);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 6, 2);
@@ -111,7 +114,7 @@
             // 
             this.cerrarSesiónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cerrarSesiónToolStripMenuItem.Image")));
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.cerrarSesiónToolStripMenuItem.Text = "Salir";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
@@ -251,6 +254,21 @@
             this.seccionesMantenimientoToolStripMenuItem.Text = "Secciones Mantenimiento";
             this.seccionesMantenimientoToolStripMenuItem.Click += new System.EventHandler(this.seccionesMantenimientoToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // reporteToolStripMenuItem
+            // 
+            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteToolStripMenuItem.Text = "Reporte";
+            this.reporteToolStripMenuItem.Click += new System.EventHandler(this.reporteToolStripMenuItem_Click);
+            // 
             // Frm_MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,5 +323,7 @@
         private System.Windows.Forms.ToolStripMenuItem permisoApplicacionAUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seccionesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem seccionesMantenimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
     }
 }

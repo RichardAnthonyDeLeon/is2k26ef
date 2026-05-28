@@ -11,6 +11,7 @@ using Capa_Vista_Seguridad;
 using Capa_Controlador_Seguridad;
 using System.Drawing.Imaging;
 using Capa_Vista_Secciones;
+using Capa_Vista_Reporteador;
 namespace Capa_Vista_Logista
 {
     public partial class Frm_MDI : Form
@@ -241,6 +242,12 @@ namespace Capa_Vista_Logista
         private void seccionesMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Secciones sec = new Frm_Secciones();
+            sec.ShowDialog();
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Secciones sec = new Frm_Reporte_Secciones();
             sec.ShowDialog();
         }
     }
