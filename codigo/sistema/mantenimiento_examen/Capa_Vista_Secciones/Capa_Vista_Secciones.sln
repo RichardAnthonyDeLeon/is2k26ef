@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Vista_Secciones", "Capa_Vista_Secciones\Capa_Vista_Secciones.csproj", "{2E02EF38-F019-46CA-BA85-89DBD5FCDF0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E02EF38-F019-46CA-BA85-89DBD5FCDF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E02EF38-F019-46CA-BA85-89DBD5FCDF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E02EF38-F019-46CA-BA85-89DBD5FCDF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E02EF38-F019-46CA-BA85-89DBD5FCDF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02DB2C2B-795E-46BB-B29A-29BF10FF0BCB}
+	EndGlobalSection
+EndGlobal

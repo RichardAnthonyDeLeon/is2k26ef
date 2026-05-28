@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using Capa_Vista_Seguridad;
 using Capa_Controlador_Seguridad;
 using System.Drawing.Imaging;
-
-
+using Capa_Vista_Secciones;
 namespace Capa_Vista_Logista
 {
     public partial class Frm_MDI : Form
@@ -91,7 +90,7 @@ namespace Capa_Vista_Logista
             Dictionary<int, ToolStripMenuItem> mapaCatalogos = new Dictionary<int, ToolStripMenuItem>
             {
                 //{708, cuentasPorPagarToolStripMenuItem}
-                
+                  {301, seccionesToolStripMenuItem}
             };
 
             // PROCESOS: 710-734 (agregar cuando estén listos)
@@ -159,6 +158,7 @@ namespace Capa_Vista_Logista
             menuItems[MenuOpciones.Catalogos].Enabled = mapaCatalogos.Values.Any(m => m.Enabled);
             menuItems[MenuOpciones.Procesos].Enabled = mapaProcesos.Values.Any(m => m.Enabled);
             menuItems[MenuOpciones.Reportes].Enabled = mapaProcesos.Values.Any(m => m.Enabled);
+        
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -167,6 +167,81 @@ namespace Capa_Vista_Logista
             Frm_LOGIN login = new Frm_LOGIN();
             login.ShowDialog();
             this.Close();
+        }
+
+        private void CerrarFormulariosHijos()
+        {
+            foreach (Form childForm in this.MdiChildren)
+            {
+                childForm.Close();
+            }
+        }
+        private void bitácoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+            Frm_Bitacora frm = new Frm_Bitacora();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_cambiar_contrasena ventana = new Frm_cambiar_contrasena(Capa_Controlador_Seguridad.Cls_Usuario_Conectado.iIdUsuario);
+            ventana.Show();
+        }
+
+        private void crearUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+            Frm_Usuario frm = new Frm_Usuario();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mantenimientoAplicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+            FrmAplicacion formAplicacion = new FrmAplicacion();
+            formAplicacion.MdiParent = this;
+            formAplicacion.Show();
+        }
+
+        private void asignarlePermisosDeAplicacionesAUsuariosSeaATravésDeUnPerfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+            Frm_asignacion_aplicacion_usuario asig_app_user = new Frm_asignacion_aplicacion_usuario();
+            asig_app_user.MdiParent = this;
+            asig_app_user.Show();
+        }
+
+        private void seccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+            Frm_Secciones secciones = new Frm_Secciones();
+            secciones.MdiParent = this;
+            secciones.ShowDialog();
+        }
+
+        private void permisoPerfilAUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+            Frm_asignacion_perfil_usuario asig_perfil = new Frm_asignacion_perfil_usuario();
+            asig_perfil.MdiParent = this;
+            asig_perfil.Show();
+        }
+
+        private void permisoApplicacionAUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosHijos();
+            Frm_Permisos_Perfiles asig_app_user = new Frm_Permisos_Perfiles();
+            asig_app_user.MdiParent = this;
+            asig_app_user.Show();
+        }
+
+        private void seccionesMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Secciones sec = new Frm_Secciones();
+            sec.ShowDialog();
         }
     }
 }
