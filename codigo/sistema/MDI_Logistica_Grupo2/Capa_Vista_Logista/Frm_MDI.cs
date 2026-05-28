@@ -90,7 +90,7 @@ namespace Capa_Vista_Logista
             Dictionary<int, ToolStripMenuItem> mapaCatalogos = new Dictionary<int, ToolStripMenuItem>
             {
                 //{708, cuentasPorPagarToolStripMenuItem}
-                  {301, seccionesToolStripMenuItem}
+                  //{301, seccionesToolStripMenuItem}
             };
 
             // PROCESOS: 710-734 (agregar cuando estén listos)
